@@ -24,3 +24,9 @@ Submissions are configured for kyan.lz@outlook.com through FormSubmit. The first
 
 Security
 Do not request or accept Social Security numbers, passwords, full account numbers, tax IDs, or login credentials through the form.
+
+
+UPDATE: FREE RESOURCES + RETIREMENT CALCULATOR
+The site now includes educational guides and a browser-based retirement projection calculator with a live chart and annual table. No server or database is required; it works on GitHub Pages.
+
+To update GitHub, upload/replace index.html, styles.css, script.js, and README.txt in the repository root, then commit the changes.

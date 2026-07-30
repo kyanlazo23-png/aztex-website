@@ -22,6 +22,8 @@
     <nav class="nav" aria-label="Primary navigation">
       <a href="#services">Services</a>
       <a href="#approach">Approach</a>
+      <a href="#resources">Resources</a>
+      <a href="#calculator">Calculator</a>
       <a href="#about">About</a>
       <a href="#assessment">Client Assessment</a>
       <a class="nav-cta" href="#assessment">Begin</a>
@@ -88,6 +90,71 @@
         <article class="step reveal"><span>02</span><div><h3>Understand</h3><p>Use the discovery conversation to identify priorities, constraints, pressure points, and the outcomes that matter most.</p></div></article>
         <article class="step reveal"><span>03</span><div><h3>Organize</h3><p>Create a practical budget, cash-flow structure, and focused action plan based on the client’s actual circumstances.</p></div></article>
         <article class="step reveal"><span>04</span><div><h3>Review</h3><p>Measure progress, adjust assumptions, and reinforce the habits required to sustain the system.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section resources-section" id="resources">
+    <div class="container">
+      <div class="section-intro reveal">
+        <div><p class="overline dark">Free resources</p><h2>Clear explanations for important financial decisions.</h2></div>
+        <p>Build your financial foundation with concise, plain-English guides designed to explain the basics without jargon or product recommendations.</p>
+      </div>
+      <div class="resource-grid">
+        <article class="resource-card reveal">
+          <span class="resource-tag">Retirement</span><h3>What is a 401(k)?</h3>
+          <p>A workplace retirement account that lets eligible employees contribute part of their pay, often with potential employer contributions.</p>
+          <details><summary>Read the guide</summary><div class="resource-detail"><p><strong>How it works:</strong> Contributions are generally deducted through payroll and invested according to the options available in the employer’s plan. A traditional 401(k) and Roth 401(k) receive different tax treatment.</p><p><strong>Important considerations:</strong> Plan fees, vesting schedules, withdrawal rules, available investments, and annual contribution limits can affect the account. Rules and limits may change each year.</p><p><strong>Start here:</strong> Review your plan documents and determine whether your employer offers a contribution match.</p></div></details>
+        </article>
+        <article class="resource-card reveal">
+          <span class="resource-tag">Retirement</span><h3>What is a Roth IRA?</h3>
+          <p>An individual retirement account funded with after-tax money, with qualified withdrawals generally available tax-free.</p>
+          <details><summary>Read the guide</summary><div class="resource-detail"><p><strong>How it works:</strong> You contribute money that has already been taxed. Eligibility, annual limits, and qualified-withdrawal requirements are governed by federal tax rules.</p><p><strong>Important considerations:</strong> Income limits may restrict direct contributions, and investment results are not guaranteed. An IRA is an account type—not an investment itself.</p><p><strong>Start here:</strong> Learn the difference between the account and the investments held inside it before making decisions.</p></div></details>
+        </article>
+        <article class="resource-card reveal">
+          <span class="resource-tag">Foundations</span><h3>How compound growth works</h3>
+          <p>Growth can build on both the money contributed and the prior growth already accumulated over time.</p>
+          <details><summary>Read the guide</summary><div class="resource-detail"><p><strong>The main drivers:</strong> Starting balance, contribution amount, time invested, and rate of return all affect a projection.</p><p><strong>Why time matters:</strong> Longer periods give potential growth more time to compound, although actual returns vary and losses are possible.</p><p><strong>Try it:</strong> Use the calculator below to compare different assumptions.</p></div></details>
+        </article>
+        <article class="resource-card reveal">
+          <span class="resource-tag">Saving</span><h3>Building an emergency fund</h3>
+          <p>A dedicated cash reserve can help cover unexpected expenses without immediately relying on high-interest debt.</p>
+          <details><summary>Read the guide</summary><div class="resource-detail"><p><strong>Choose a target:</strong> Start with an achievable first milestone, then work toward a reserve based on your essential expenses and personal circumstances.</p><p><strong>Keep it accessible:</strong> Emergency savings are generally intended to be liquid and separate from everyday spending.</p><p><strong>Build consistently:</strong> Regular automatic transfers can turn a large goal into a manageable habit.</p></div></details>
+        </article>
+      </div>
+      <p class="resource-disclaimer">Educational information only. Account rules, eligibility, tax treatment, and contribution limits can change. Consult the appropriate licensed or tax professional regarding your circumstances.</p>
+    </div>
+  </section>
+
+  <section class="section calculator-section" id="calculator">
+    <div class="container">
+      <div class="calculator-heading reveal">
+        <div><p class="overline">Retirement calculator</p><h2>See how contributions and hypothetical growth may build over time.</h2></div>
+        <p>Adjust the assumptions to explore a year-by-year projection. The result is an educational estimate, not a prediction or recommendation.</p>
+      </div>
+      <div class="calculator-shell reveal">
+        <form class="calculator-controls" id="retirementCalculator">
+          <label>Current retirement balance ($)<input id="currentBalance" type="number" min="0" step="100" value="10000"></label>
+          <label>Years until retirement<input id="yearsToRetirement" type="number" min="1" max="70" step="1" value="30"></label>
+          <label>Annual contribution ($)<input id="annualContribution" type="number" min="0" step="100" value="6000"></label>
+          <label>Assumed average annual return (%)<input id="annualReturn" type="number" min="-50" max="50" step="0.1" value="7"><small>Hypothetical and not guaranteed</small></label>
+          <label>Annual contribution increase (%)<input id="contributionIncrease" type="number" min="0" max="25" step="0.1" value="0"></label>
+          <label>Contribution timing<select id="contributionTiming"><option value="monthly" selected>Monthly throughout the year</option><option value="annual">End of each year</option></select></label>
+          <button class="button button-primary" type="submit">Update projection</button>
+        </form>
+        <div class="calculator-results" aria-live="polite">
+          <div class="result-cards">
+            <div><span>Estimated balance</span><strong id="endingBalance">$0</strong></div>
+            <div><span>Total contributions</span><strong id="totalContributions">$0</strong></div>
+            <div><span>Estimated growth</span><strong id="investmentGrowth">$0</strong></div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-header"><div><strong>Projected retirement balance</strong><span>Balance, contributions, and estimated growth</span></div><div class="chart-legend"><span><i class="legend-balance"></i>Balance</span><span><i class="legend-contributions"></i>Contributions</span></div></div>
+            <div class="chart-wrap"><canvas id="retirementChart" role="img" aria-label="Projected retirement balance chart"></canvas></div>
+          </div>
+          <details class="projection-details"><summary>View year-by-year projection</summary><div class="table-wrap"><table><thead><tr><th>Year</th><th>Contributions</th><th>Estimated growth</th><th>Balance</th></tr></thead><tbody id="projectionTable"></tbody></table></div></details>
+          <p class="calculator-disclaimer"><strong>Important:</strong> This projection is hypothetical and based solely on the assumptions entered. It does not account for taxes, fees, inflation, changing contribution limits, withdrawals, or market volatility. Actual returns can be higher or lower, including negative. This calculator provides general education and is not investment, tax, legal, or retirement-planning advice.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -226,7 +293,7 @@
 <footer class="footer">
   <div class="container footer-main">
     <div><a class="brand wordmark footer-brand" href="#top"><span class="brand-name">AZTEX<small>FINANCIAL SERVICES</small></span></a><p>Budgeting, cash-flow planning, debt organization, and financial education for individuals and families.</p></div>
-    <div><strong>Company</strong><a href="#services">Services</a><a href="#approach">Approach</a><a href="#about">About</a></div>
+    <div><strong>Company</strong><a href="#services">Services</a><a href="#approach">Approach</a><a href="#resources">Free Resources</a><a href="#calculator">Retirement Calculator</a><a href="#about">About</a></div>
     <div><strong>Client</strong><a href="#assessment">Financial Clarity Assessment</a><a href="mailto:kyan.lz@outlook.com">kyan.lz@outlook.com</a><span>Phoenix, Arizona</span></div>
   </div>
   <div class="container footer-bottom"><span>© <span id="year"></span> Aztex. All rights reserved.</span><span>Educational and organizational services only.</span></div>
