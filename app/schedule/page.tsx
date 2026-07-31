@@ -1,33 +1,50 @@
-import Button from "@/components/Button";
 import SectionTitle from "@/components/SectionTitle";
+
+const expectations = [
+  "Choose an available date and time.",
+  "Receive a confirmation and calendar invitation.",
+  "Meet virtually for a focused financial-organization consultation.",
+  "Receive a written summary and practical next steps after the meeting.",
+];
 
 export default function SchedulePage() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:px-12">
+    <section className="mx-auto max-w-6xl px-6 py-20 sm:px-10 lg:px-12">
       <SectionTitle
         eyebrow="Schedule"
-        title="Book a consultation with AZTEX."
-        description="This page is prepared for embedding scheduling tools such as Calendly, making it easy to reserve time for a conversation."
+        title="Schedule your consultation."
+        description="Select a time that works for you. Calendly checks your availability in real time and automatically sends the meeting invitation and confirmation details."
       />
-      <div className="mt-16 rounded-[2rem] border border-[color:var(--color-charcoal)]/10 bg-white/95 p-10 shadow-[0_30px_80px_-50px_rgba(34,34,34,0.16)]">
-        <div className="space-y-6 text-[color:var(--color-charcoal)]">
-          <p className="text-base leading-8">
-            To schedule a consultation, select a time that works for you and begin a focused conversation about your financial goals.
+
+      <div className="mt-14 grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
+        <aside className="rounded-[2rem] bg-[color:var(--color-navy)] p-8 text-white sm:p-10">
+          <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--color-gold)]">
+            What to expect
           </p>
-          <div className="h-[420px] rounded-[1.75rem] border border-[color:var(--color-charcoal)]/10 bg-[color:var(--color-navy)]/5 p-6 text-[color:var(--color-charcoal)]">
-            <div className="flex h-full flex-col items-center justify-center text-center">
-              <p className="text-sm uppercase tracking-[0.36em] text-[color:var(--color-gold)]">
-                Calendly integration coming soon
-              </p>
-              <h2 className="mt-6 text-2xl font-semibold text-[color:var(--color-navy)]">
-                Placeholder for embedded scheduling
-              </h2>
-              <p className="mt-4 max-w-md text-base leading-7 text-[color:var(--color-charcoal)]/75">
-                This section will host the embedded scheduling component so clients can book appointments directly from the site.
-              </p>
-              <Button href="mailto:hello@aztexfinancial.com" className="mt-8">Contact via Email</Button>
-            </div>
+          <ol className="mt-8 space-y-7">
+            {expectations.map((item, index) => (
+              <li key={item} className="flex gap-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/25 text-sm text-white">
+                  {index + 1}
+                </span>
+                <p className="pt-1 text-sm leading-7 text-white/85">{item}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-10 border-t border-white/15 pt-8">
+            <p className="text-sm leading-7 text-white/70">
+              AZTEX currently provides budgeting assistance, cash-flow organization, goal planning, and financial education. Services do not include investment, tax, legal, or insurance advice.
+            </p>
           </div>
+        </aside>
+
+        <div className="overflow-hidden rounded-[2rem] border border-[color:var(--color-charcoal)]/10 bg-white shadow-[0_30px_80px_-50px_rgba(34,34,34,0.2)]">
+          <iframe
+            title="Schedule an Initial Financial Consultation with AZTEX"
+            src="https://calendly.com/kyan-lz/initial-financial-consultation?hide_gdpr_banner=1&background_color=ffffff&text_color=222222&primary_color=0b1f33"
+            className="h-[780px] w-full border-0"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
