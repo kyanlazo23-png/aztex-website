@@ -13,9 +13,9 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-[color:var(--color-navy)] text-[color:var(--color-white-warm)] hover:bg-[color:rgba(11,31,51,0.9)]",
+    "bg-[color:var(--color-navy)] !text-white hover:bg-[#163552] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[color:var(--color-gold)]",
   secondary:
-    "border border-[color:var(--color-charcoal)] text-[color:var(--color-charcoal)] bg-transparent hover:bg-[color:rgba(11,31,51,0.04)]",
+    "border border-[color:var(--color-navy)] text-[color:var(--color-navy)] bg-transparent hover:bg-[color:var(--color-navy)] hover:!text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[color:var(--color-gold)]",
 };
 
 export default function Button({
@@ -25,7 +25,7 @@ export default function Button({
   href,
   ...props
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 ${variants[variant]} ${className}`;
+  const classes = `inline-flex min-h-12 items-center justify-center rounded-full px-7 py-3 text-sm font-semibold tracking-wide transition-all duration-200 ${variants[variant]} ${className}`;
 
   if (href) {
     return (
