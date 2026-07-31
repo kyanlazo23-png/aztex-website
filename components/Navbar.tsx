@@ -19,9 +19,14 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-[color:var(--color-charcoal)]/10 bg-[color:var(--color-white-warm)]/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-10 lg:px-12">
-        <Link href="/" className="text-base font-semibold uppercase tracking-[0.32em] text-[color:var(--color-navy)]">
+        <Link
+          href="/"
+          aria-label="AZTEX home"
+          className="font-serif text-[2rem] font-medium uppercase leading-none tracking-[0.18em] text-[color:var(--color-navy)] transition-opacity duration-200 hover:opacity-75 sm:text-[2.25rem]"
+        >
           AZTEX
         </Link>
+
         <nav className="hidden items-center gap-8 md:flex">
           {navigation.map((item) => (
             <Link
@@ -33,6 +38,7 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
+
         <button
           type="button"
           aria-expanded={isOpen}
@@ -48,6 +54,7 @@ export default function Navbar() {
           </div>
         </button>
       </div>
+
       {isOpen ? (
         <div className="border-t border-[color:var(--color-charcoal)]/10 bg-[color:var(--color-white-warm)] p-6 md:hidden">
           <div className="space-y-4">
