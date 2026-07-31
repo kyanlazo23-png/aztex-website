@@ -2,29 +2,39 @@ import SectionTitle from "@/components/SectionTitle";
 
 const services = [
   {
-    title: "Budgeting",
+    title: "Financial Organization",
     description:
-      "A clear, personalized budget that helps you understand where money goes and how to redirect it toward what matters most.",
+      "A structured review of income, expenses, savings, and financial obligations designed to create a clear and maintainable financial system.",
   },
   {
-    title: "Cash-flow planning",
+    title: "Cash Flow Planning",
     description:
-      "A practical plan for income, savings, and spending so each month feels more intentional and under control.",
+      "A practical framework for allocating income, managing recurring obligations, and aligning monthly cash flow with clearly defined priorities.",
   },
   {
-    title: "Financial education",
+    title: "Budget Development",
     description:
-      "Simple explanations, meaningful context, and thoughtful guidance that build confidence in financial decisions.",
+      "A personalized budget designed to improve visibility, strengthen spending discipline, and support short- and long-term objectives.",
   },
   {
-    title: "Accountability",
+    title: "Goal Planning",
     description:
-      "Regular check-ins, timely progress reviews, and aligned next steps to keep goals moving forward.",
+      "A structured process for defining financial priorities, establishing measurable milestones, and organizing the actions required to make progress.",
   },
   {
-    title: "Meeting summaries",
+    title: "Financial Education",
     description:
-      "Clear recaps after every conversation so your priorities remain visible and the next action is always well-defined.",
+      "Clear explanations and practical context that strengthen financial knowledge and support informed decision-making.",
+  },
+  {
+    title: "Accountability Sessions",
+    description:
+      "Periodic reviews focused on implementation, measurable progress, and clearly defined next steps.",
+  },
+  {
+    title: "Meeting Summaries",
+    description:
+      "A concise written record of key observations, agreed priorities, and action items following each consultation.",
   },
 ];
 
@@ -33,8 +43,8 @@ export default function ServicesPage() {
     <section className="mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:px-12">
       <SectionTitle
         eyebrow="Services"
-        title="Comprehensive planning designed for daily financial clarity."
-        description="AZTEX supports every stage of your financial life with a service suite that blends structure, education, and consistent follow through."
+        title="Structured services for stronger financial organization."
+        description="AZTEX provides financial organization, education, and accountability services designed to improve decision-making and support consistent implementation."
       />
       <div className="mt-16 grid gap-8 md:grid-cols-2">
         {services.map((service) => (
