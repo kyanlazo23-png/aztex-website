@@ -3,7 +3,7 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "reac
 
 type ButtonProps = {
   children: ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "light";
   className?: string;
   href?: string;
 } & (
@@ -13,9 +13,11 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-[color:var(--color-navy)] !text-white hover:bg-[#163552] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[color:var(--color-gold)]",
+    "bg-[color:var(--color-navy)] text-white hover:bg-[#163552] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[color:var(--color-gold)]",
   secondary:
-    "border border-[color:var(--color-navy)] text-[color:var(--color-navy)] bg-transparent hover:bg-[color:var(--color-navy)] hover:!text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[color:var(--color-gold)]",
+    "border border-[color:var(--color-navy)] bg-transparent text-[color:var(--color-navy)] hover:bg-[color:var(--color-navy)] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[color:var(--color-gold)]",
+  light:
+    "bg-white text-[#0B1F33] hover:bg-[#f0eee8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[color:var(--color-gold)]",
 };
 
 export default function Button({
