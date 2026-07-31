@@ -1,8 +1,10 @@
+import Link from "next/link";
 import SectionTitle from "@/components/SectionTitle";
 
 const expectations = [
   "Choose an available date and time.",
   "Receive a confirmation and calendar invitation.",
+  "Complete the AZTEX Client Assessment before the meeting.",
   "Meet virtually for a focused financial-organization consultation.",
   "Receive a written summary and practical next steps after the meeting.",
 ];
@@ -31,7 +33,21 @@ export default function SchedulePage() {
               </li>
             ))}
           </ol>
-          <div className="mt-10 border-t border-white/15 pt-8">
+
+          <div className="mt-9 rounded-2xl border border-white/15 bg-white/5 p-5">
+            <p className="text-sm font-semibold text-white">Already booked?</p>
+            <p className="mt-2 text-sm leading-6 text-white/75">
+              Complete the Client Assessment before your consultation so AZTEX can prepare for the conversation.
+            </p>
+            <Link
+              href="/client-assessment"
+              className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-[color:var(--color-navy)] transition hover:bg-white/90"
+            >
+              Complete client assessment
+            </Link>
+          </div>
+
+          <div className="mt-8 border-t border-white/15 pt-8">
             <p className="text-sm leading-7 text-white/70">
               AZTEX currently provides budgeting assistance, cash-flow organization, goal planning, and financial education. Services do not include investment, tax, legal, or insurance advice.
             </p>
@@ -46,6 +62,21 @@ export default function SchedulePage() {
             loading="lazy"
           />
         </div>
+      </div>
+
+      <div className="mt-10 rounded-2xl border border-[color:var(--color-charcoal)]/10 bg-white p-6 sm:flex sm:items-center sm:justify-between sm:gap-8">
+        <div>
+          <h2 className="text-xl font-semibold text-[color:var(--color-navy)]">Need to cancel or reschedule?</h2>
+          <p className="mt-2 text-sm leading-6 text-[color:var(--color-charcoal)]/70">
+            Use the unique cancellation or rescheduling link included in your Calendly confirmation email.
+          </p>
+        </div>
+        <Link
+          href="/client-assessment"
+          className="mt-5 inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-[color:var(--color-navy)] px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#163552] sm:mt-0"
+        >
+          Open client assessment
+        </Link>
       </div>
     </section>
   );
