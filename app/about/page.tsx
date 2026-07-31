@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import Link from "next/link";
 import SectionTitle from "@/components/SectionTitle";
 
 export default function AboutPage() {
@@ -38,17 +38,24 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+
         <div className="rounded-[2rem] bg-[color:var(--color-navy)]/5 p-10">
-          <div className="rounded-[2rem] bg-[color:var(--color-navy)] px-10 py-12 text-[color:var(--color-navy)] shadow-[0_30px_80px_-50px_rgba(11,31,51,0.18)]">
-            <h2 className="text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl">
+          <div className="rounded-[2rem] bg-[color:var(--color-navy)] px-10 py-12 text-white shadow-[0_30px_80px_-50px_rgba(11,31,51,0.18)]">
+            <p className="text-sm uppercase tracking-[0.32em] text-[color:var(--color-gold)]">
+              Our approach
+            </p>
+            <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-[-0.04em] text-white sm:text-4xl">
               AZTEX is built for families who want premium financial support without the complexity.
             </h2>
-            <p className="mt-8 text-base leading-8 text-[color:var(--color-charcoal)]/90">
+            <p className="mt-8 text-base leading-8 text-white/80">
               We use a system-first approach that keeps planning straightforward, progress visible, and decisions grounded in what matters most.
             </p>
-            <div className="mt-10">
-              <Button href="/schedule">Schedule Consultation</Button>
-            </div>
+            <Link
+              href="/schedule"
+              className="mt-10 inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-wide !text-[color:var(--color-navy)] transition hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--color-gold)]"
+            >
+              Schedule Consultation
+            </Link>
           </div>
         </div>
       </div>
