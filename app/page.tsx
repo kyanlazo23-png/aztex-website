@@ -5,19 +5,19 @@ const pillars = [
     number: "01",
     title: "Financial Organization",
     description:
-      "Bring income, expenses, savings, and priorities into one practical system that is clear enough to use every month.",
+      "Establish a structured system for income, expenses, savings, and financial priorities that can be maintained consistently.",
   },
   {
     number: "02",
     title: "Financial Education",
     description:
-      "Understand the concepts behind your financial decisions through straightforward, judgment-free education.",
+      "Strengthen financial knowledge through clear explanations, practical context, and disciplined application.",
   },
   {
     number: "03",
     title: "Accountability",
     description:
-      "Turn intentions into consistent action through defined next steps, progress reviews, and ongoing structure.",
+      "Support consistent implementation through defined priorities, measurable progress, and periodic review.",
   },
 ];
 
@@ -25,22 +25,22 @@ const process = [
   {
     step: "01",
     title: "Schedule",
-    description: "Choose a consultation time and complete the short intake questions during booking.",
+    description: "Select a consultation time and complete the required intake questions during booking.",
   },
   {
     step: "02",
     title: "Assess",
-    description: "We review your goals, current habits, cash flow, and the challenges creating the most stress.",
+    description: "Review your financial objectives, current position, and the areas requiring the greatest attention.",
   },
   {
     step: "03",
     title: "Organize",
-    description: "Together, we build a practical financial system centered on your priorities and circumstances.",
+    description: "Develop a personalized financial organization system aligned with your priorities and circumstances.",
   },
   {
     step: "04",
-    title: "Act",
-    description: "You leave with clear next steps, useful resources, and a plan you can put into practice.",
+    title: "Implement",
+    description: "Establish clear priorities, practical action steps, and a framework for continued progress.",
   },
 ];
 
@@ -55,10 +55,10 @@ export default function Home() {
               Financial organization · Education · Accountability
             </p>
             <h1 className="mt-8 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.055em] text-[color:var(--color-navy)] sm:text-6xl lg:text-[5.25rem]">
-              Financial clarity starts with organization.
+              Financial organization that creates lasting confidence.
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[color:var(--color-charcoal)]/78 sm:text-xl">
-              AZTEX helps individuals and families build practical budgets, organize cash flow, and develop stronger financial habits through clear education and disciplined follow-through.
+              AZTEX helps individuals and families organize their finances, strengthen financial decision-making, and establish practical systems that support long-term financial objectives.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button href="/schedule">Schedule Consultation</Button>
@@ -67,9 +67,9 @@ export default function Home() {
               </Button>
             </div>
             <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 border-t border-[color:var(--color-charcoal)]/10 pt-7 text-sm text-[color:var(--color-charcoal)]/65">
-              <span>Judgment-free guidance</span>
-              <span>Practical financial systems</span>
-              <span>Educational, not advisory</span>
+              <span>Structured financial systems</span>
+              <span>Practical financial education</span>
+              <span>Educational services only</span>
             </div>
           </div>
 
@@ -109,7 +109,7 @@ export default function Home() {
               What we do
             </p>
             <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.045em] text-[color:var(--color-navy)] sm:text-5xl">
-              A stronger financial foundation, built one decision at a time.
+              Building stronger financial foundations.
             </h2>
           </div>
           <div className="grid gap-px overflow-hidden rounded-[2rem] border border-[color:var(--color-charcoal)]/10 bg-[color:var(--color-charcoal)]/10 md:grid-cols-3">
@@ -135,10 +135,10 @@ export default function Home() {
               Our process
             </p>
             <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.045em] text-[color:var(--color-navy)] sm:text-5xl">
-              Clear steps. Practical outcomes.
+              A structured process for measurable progress.
             </h2>
             <p className="mt-6 text-lg leading-8 text-[color:var(--color-charcoal)]/72">
-              Every engagement follows a focused process designed to reduce uncertainty and turn financial goals into manageable action.
+              Every engagement follows a focused process designed to improve financial visibility, establish clear priorities, and support consistent implementation.
             </p>
           </div>
 
@@ -161,15 +161,15 @@ export default function Home() {
               About AZTEX
             </p>
             <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.045em] text-[color:var(--color-navy)] sm:text-5xl">
-              Financial guidance should feel understandable, useful, and human.
+              Practical financial organization built on clarity, discipline, and education.
             </h2>
           </div>
           <div>
             <p className="text-lg leading-8 text-[color:var(--color-charcoal)]/78">
-              AZTEX was created to help people build financial confidence through organization and education—not pressure, judgment, or unnecessary complexity. Our current services focus on budgeting, cash-flow organization, goal planning, and accountability.
+              AZTEX helps clients establish organized financial systems that simplify everyday financial decisions. Our current services focus on budgeting, cash-flow organization, goal planning, financial education, and accountability.
             </p>
             <p className="mt-6 text-base leading-8 text-[color:var(--color-charcoal)]/66">
-              The aim is simple: give clients a clear view of where they stand, a practical system they can maintain, and the knowledge to make more confident decisions over time.
+              Through structured planning and practical implementation, clients gain greater visibility into their financial position and a clearer framework for continued progress.
             </p>
             <div className="mt-8">
               <Button href="/about" variant="secondary">Learn About AZTEX</Button>
@@ -185,12 +185,12 @@ export default function Home() {
               Begin with clarity
             </p>
             <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.045em] text-white sm:text-5xl">
-              Build a financial system that supports the life you are working toward.
+              Build a stronger financial future through organization, education, and disciplined execution.
             </h2>
           </div>
           <div className="mt-8 shrink-0 lg:mt-0 lg:pl-12">
             <Button href="/schedule" variant="light">
-              Schedule Consultation
+              Schedule Your Consultation
             </Button>
           </div>
         </div>
