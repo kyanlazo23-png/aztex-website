@@ -189,7 +189,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="mt-8 shrink-0 lg:mt-0 lg:pl-12">
-            <Button href="/schedule" className="bg-white !text-[color:var(--color-navy)] hover:bg-white/90">
+            <Button href="/schedule" variant="light">
               Schedule Consultation
             </Button>
           </div>
