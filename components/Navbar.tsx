@@ -7,10 +7,10 @@ const navigation = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Financial Score", href: "/financial-score" },
   { label: "Schedule", href: "/schedule" },
   { label: "Retirement Calculator", href: "/retirement-calculator" },
   { label: "Insights", href: "/insights" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -27,7 +27,7 @@ export default function Navbar() {
           AZTEX
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {navigation.map((item) => (
             <Link
               key={item.href}
